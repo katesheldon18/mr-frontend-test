@@ -1,9 +1,10 @@
+import { useState } from "react";
 import styles from "./Button.module.scss";
 
-export const Button = () => {
+export const Button = (props) => {
     return (
         <div className={styles.container}>
-            <button className={styles.button}>ADD TO CART</button>
+            <button className={styles.button} onClick={props.onClick}>ADD TO CART</button>
         </div>
     )
 }
