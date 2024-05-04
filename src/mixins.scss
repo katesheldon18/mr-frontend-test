@@ -1,0 +1,33 @@
+@import "./variables";
+
+@mixin title {
+    color: $color-text-dark;
+    font-size: $font-lg;
+}
+
+@mixin price {
+    color: $color-text-dark;
+    font-size: $font-reg;
+    font-weight: $weight-bold;
+}
+
+@mixin description {
+    color: $color-text-light;
+    font-size: $font-reg;
+    font-weight: $weight-light;
+    line-height: 1.5;
+}
+
+@mixin cta {
+    margin: 10px 0px;
+    padding: 12px 24px;
+    border: 2px solid $color-text-dark;
+    background-color: transparent;
+    font-size: $font-xl;
+    font-weight: $weight-bold;
+    &:hover {
+        color: white;
+        background-color: $color-text-dark;
+        cursor: pointer;
+    }
+}

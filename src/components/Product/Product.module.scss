@@ -1,0 +1,21 @@
+@import "../../mixins.scss";
+
+.container {
+
+}
+
+.image {
+    height: 400px;
+}
+
+.title {
+   @include title;
+}
+
+.price {
+    @include price;
+}
+
+.description {
+    @include description;
+}
