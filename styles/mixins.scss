@@ -26,15 +26,20 @@
     font-size: $font-lg;
     font-weight: $weight-bold;
     transition: 0.2s ease-in-out;
-    &:hover:not(:disabled) {
+    &:hover {
         color: white;
         background-color: $color-text-dark;
         cursor: pointer; 
     }
-    &:disabled {
+    &--disabled {
         color: grey;
         border: 2px solid grey;
         cursor: initial;
+        &:hover {
+            color: grey;
+            background-color: transparent;
+            cursor: initial;
+        }
     }
 }
 

@@ -32,9 +32,8 @@ function App() {
       <Button
         disabled={!productData?.size}
         onClick={() => {
-          if ("disabled") {
-            alert("Please select a size")
-          }
+          // setError("Please select a size.");
+          if (!productData?.size) return;
           setCart(cart.concat(productData))
         }} />
       <Cart cart={cart} />
