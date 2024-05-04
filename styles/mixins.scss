@@ -2,7 +2,7 @@
 
 @mixin title {
     color: $color-text-dark;
-    font-size: $font-lg;
+    font-size: $font-xl;
 }
 
 @mixin price {
@@ -23,11 +23,17 @@
     padding: 12px 24px;
     border: 2px solid $color-text-dark;
     background-color: transparent;
-    font-size: $font-xl;
+    font-size: $font-lg;
     font-weight: $weight-bold;
-    &:hover {
+    transition: 0.2s ease-in-out;
+    &:hover:not(:disabled) {
         color: white;
         background-color: $color-text-dark;
-        cursor: pointer;
+        cursor: pointer; 
+    }
+    &:disabled {
+        color: grey;
+        border: 2px solid grey;
+        cursor: initial;
     }
 }

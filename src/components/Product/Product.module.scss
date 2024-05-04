@@ -3,23 +3,45 @@
 @import "../../../styles/mixins";
 
 .container {
-
+    margin: 100px 40px 0px;
+    overflow: hidden;
+//go to a 2 column layout at tablet / desktop breakpoint
 }
 
 .image {
-    height: 400px;
+    width: 100vw;
 }
 
 .title {
    @include title;
+   margin: 40px 0px;
 }
 
 .price {
     @include price;
+    margin-bottom: 40px;
 }
 
 .description {
     @include description;
+    margin-bottom: 40px;
+}
+
+.size-heading {
+    font-size: $font-reg;
+    color: $color-text-light;
+    font-weight: $weight-bold;
+    margin-bottom: 16px;
+}
+
+.required {
+    color: $color-text-required;
+}
+
+.letter {
+    display: inline-flex;
+    padding-left: 10px;
+    color: $color-text-dark;
 }
 
 .size-container {
@@ -29,9 +51,11 @@
 .sizes {
     color: $color-text-light;
     border: 0.5px solid $color-text-light;
-    width: 30px;
+    padding: 16px 20px;
     margin: 4px;
-    padding: 10px;
     text-align: center;
     cursor: pointer;
+    &--selected {
+        border: 2px solid black;
+    }
 }
