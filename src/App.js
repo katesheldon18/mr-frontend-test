@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Header } from "./components/Header/Header.js";
 import { Product } from "./components/Product/Product.js";
 import { Button } from "./components/Button/Button.js";
 import { Cart } from "./components/Cart/Cart.js";
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header cart={cart} />
       {productData && <Product
         imageURL={productData.imageURL}
         title={productData.title}

@@ -37,3 +37,10 @@
         cursor: initial;
     }
 }
+
+@mixin count {
+    color: $color-text-light;
+    font-size: $font-xl;
+    font-weight: $weight-light;
+    align-items: center;
+}
