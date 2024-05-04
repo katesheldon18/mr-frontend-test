@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import styles from "./Product.module.scss";
 
 export const Product = ({ title, description, imageURL, price, sizeOptions, onSizeClick }) => {
@@ -8,8 +7,8 @@ export const Product = ({ title, description, imageURL, price, sizeOptions, onSi
             <div className={styles.title}>{title}</div>
             <div className={styles.price}>${price}.00</div>
             <div className={styles.description}>{description}</div>
-            <div>{sizeOptions.map((size) => {
-                return <div onClick={() => {
+            <div className={styles["size-container"]}>{sizeOptions.map((size) => {
+                return <div className={styles.sizes} onClick={() => {
                     onSizeClick(size.label)
                 }}>{size.label}</div>
             })}</div>

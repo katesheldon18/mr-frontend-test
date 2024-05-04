@@ -1,4 +1,6 @@
-@import "../../mixins.scss";
+@import "../../../styles/global";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
 
 .container {
 
@@ -18,4 +20,18 @@
 
 .description {
     @include description;
+}
+
+.size-container {
+    display: flex;
+}
+
+.sizes {
+    color: $color-text-light;
+    border: 0.5px solid $color-text-light;
+    width: 30px;
+    margin: 4px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
 }

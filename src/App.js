@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Product } from "./components/Product/Product.js";
-import { Size } from "./components/Sizes/Sizes.js";
 import AddToCart, { Button } from "./components/Button/Button.js";
 import { Cart } from "./components/Cart/Cart.js";
 
