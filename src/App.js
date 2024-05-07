@@ -28,14 +28,12 @@ function App() {
         size={productData.size}
         onSizeClick={(size) => {
           setProductData({ ...productData, size: size });
-        }} />}
-      <Button
-        disabled={!productData?.size}
-        onClick={() => {
-          // setError("Please select a size.");
-          if (!productData?.size) return;
+        }}
+        onAddCartClick={() => {
+          if (!productData.size) return;
           setCart(cart.concat(productData))
-        }} />
+        }}
+      />}
       <Cart cart={cart} />
     </div >
   );

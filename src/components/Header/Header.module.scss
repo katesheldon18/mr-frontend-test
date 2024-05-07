@@ -11,9 +11,23 @@
     align-items: center;
 }
 
+.my-cart {
+    display: none;
+}
+
 .count {
     @include count;
     margin-left: 12px;
     padding-right: 24px;
     align-self: center;
+}
+
+@media (min-width: 760px) {
+    .icon {
+        display: none;
+    }
+
+    .my-cart {
+        display: block;
+    }
 }

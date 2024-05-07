@@ -1,4 +1,5 @@
 import styles from "./Product.module.scss";
+import { Button } from "../Button/Button";
 import cx from "classnames";
 
 export const Product = ({
@@ -9,6 +10,7 @@ export const Product = ({
     size,
     sizeOptions,
     onSizeClick,
+    onAddCartClick,
 }) => {
     return (
         <div className={styles.container}>
@@ -41,6 +43,10 @@ export const Product = ({
                         );
                     })}
                 </div>
+                <Button
+                    disabled={!size}
+                    onClick={onAddCartClick}
+                />
             </div>
         </div>
     );
