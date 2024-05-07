@@ -7,11 +7,13 @@
     background-color: $color-header-bg;
     height: 80px;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .count {
     @include count;
-    margin-left: auto;
+    margin-left: 12px;
     padding-right: 24px;
     align-self: center;
 }
