@@ -4,15 +4,22 @@
 
 .container {
     margin: 40px 0px;
+    padding: 20px 0px;
     background-color: $color-header-bg;
-    height: 80px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
+}
+
+.cart {
+    display: flex;
+    cursor: pointer;
 }
 
 .my-cart {
     display: none;
+    color: #888888
 }
 
 .count {

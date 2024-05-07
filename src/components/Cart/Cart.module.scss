@@ -3,5 +3,33 @@
 @import "../../../styles/mixins";
 
 .container {
-    border: 1px solid blue;
+    position: absolute;
+    top: 100%;
+    right: 24px;
+    width: 415px;
+    padding: 20px 14px;
+    border: 1px solid $color-border-light;
+    background-color: white;
+}
+
+.item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.img {
+    height: 130px;
+    width: auto;
+}
+
+.title {
+    margin-bottom: 12px;
+}
+
+.price {
+    margin-bottom: 20px;
 }

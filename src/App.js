@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Header } from "./components/Header/Header.js";
 import { Product } from "./components/Product/Product.js";
-import { Button } from "./components/Button/Button.js";
 import { Cart } from "./components/Cart/Cart.js";
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
           setCart(cart.concat(productData))
         }}
       />}
-      <Cart cart={cart} />
     </div >
   );
 }

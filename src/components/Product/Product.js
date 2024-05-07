@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Product.module.scss";
 import { Button } from "../Button/Button";
 import cx from "classnames";
@@ -12,6 +13,7 @@ export const Product = ({
     onSizeClick,
     onAddCartClick,
 }) => {
+    const [error, setError] = useState(false)
     return (
         <div className={styles.container}>
             <div className={styles["column-1"]}>
@@ -24,6 +26,7 @@ export const Product = ({
                 <div className={styles["size-heading"]}>
                     SIZE<span className={styles.required}>*</span>
                     <div className={styles.letter}>{size}</div>
+                    <span className={styles.error}>{error ? "Please select a size:" : ""}</span>
                 </div>
                 <div className={styles["size-container"]}>
                     {sizeOptions.map((sizeOption) => {
@@ -35,6 +38,7 @@ export const Product = ({
                                     isSelected && styles["sizes--selected"]
                                 )}
                                 onClick={() => {
+                                    setError(false);
                                     onSizeClick(sizeOption.label);
                                 }}
                             >
@@ -45,8 +49,14 @@ export const Product = ({
                 </div>
                 <Button
                     disabled={!size}
-                    onClick={onAddCartClick}
-                />
+                    onClick={() => {
+                        if (!size) return setError(true);
+                        setError(false);
+                        onAddCartClick();
+                    }}
+                >
+                    ADD TO CART
+                </Button>
             </div>
         </div>
     );

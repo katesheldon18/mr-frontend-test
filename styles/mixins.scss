@@ -19,11 +19,11 @@
 }
 
 @mixin cta {
-    margin: 10px 0px;
+    margin: 20px 0px;
     padding: 12px 24px;
     border: 2px solid $color-text-dark;
     background-color: transparent;
-    font-size: $font-lg;
+    font-size: $font-xl;
     font-weight: $weight-bold;
     transition: 0.2s ease-in-out;
     &:hover {
